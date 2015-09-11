@@ -41,6 +41,11 @@ class BuffersController < ApplicationController
     end
   end
 
+  def complete_listing
+    @buffers = Buffer.all
+    render '/buffers/complete_listing.text.erb', layout: false, content_type: 'text/plain'
+  end
+
   def destroy
     @buffer.destroy
     respond_to do |format|
