@@ -57,6 +57,6 @@ class BuffersController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def buffer_params
-      params.require(:buffer).permit(:name, :code)
+      params.require(:buffer).permit(:name, :code, :enabled, :description)
     end
 end
