@@ -1,14 +1,17 @@
 <p id="notice"><%= notice %></p>
+<div class="row">
+  <div id="code" class="col-md-12">
+<pre class="brush: ror">
+<%= @buffer.code %>
+</pre>
+  </div>
+</div>
 
-<p>
-  <strong>Name:</strong>
-  <%= @buffer.name %>
-</p>
-
-<p>
-  <strong>Code:</strong>
-  <%= @buffer.code %>
-</p>
+<%= javascript_tag do %>
+  $(document).ready(function(){
+    SyntaxHighlighter.all();
+  });
+<% end %>
 
 <%= link_to 'Edit', edit_buffer_path(@buffer) %> |
 <%= link_to 'Back', buffers_path %>
