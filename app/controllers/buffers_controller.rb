@@ -1,28 +1,20 @@
 class BuffersController < ApplicationController
   before_action :set_buffer, only: [:show, :edit, :update, :destroy]
 
-  # GET /buffers
-  # GET /buffers.json
   def index
     @buffers = Buffer.all
   end
 
-  # GET /buffers/1
-  # GET /buffers/1.json
   def show
   end
 
-  # GET /buffers/new
   def new
     @buffer = Buffer.new
   end
 
-  # GET /buffers/1/edit
   def edit
   end
 
-  # POST /buffers
-  # POST /buffers.json
   def create
     @buffer = Buffer.new(buffer_params)
 
@@ -37,8 +29,6 @@ class BuffersController < ApplicationController
     end
   end
 
-  # PATCH/PUT /buffers/1
-  # PATCH/PUT /buffers/1.json
   def update
     respond_to do |format|
       if @buffer.update(buffer_params)
@@ -51,8 +41,6 @@ class BuffersController < ApplicationController
     end
   end
 
-  # DELETE /buffers/1
-  # DELETE /buffers/1.json
   def destroy
     @buffer.destroy
     respond_to do |format|
