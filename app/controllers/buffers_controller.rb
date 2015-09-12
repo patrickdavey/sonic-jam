@@ -42,7 +42,7 @@ class BuffersController < ApplicationController
   end
 
   def complete_listing
-    @buffers = Buffer.all
+    @buffers = Buffer.enabled.all
     render '/buffers/complete_listing.text.erb', layout: false, content_type: 'text/plain'
   end
 
