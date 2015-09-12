@@ -1,8 +1,11 @@
 <% @buffers.each do |buffer| %>
+<% method = shamethod(buffer) %>
 <%= "# #{buffer.name }" %>
 <%= "# #{buffer.description }" %>
-
+def <%= method %>
 <%= buffer.code %>
+end
 
+<%= method %>
 <% end %>
 
