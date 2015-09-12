@@ -15,7 +15,12 @@
     <% @buffers.each do |buffer| %>
       <tr>
         <td><%= link_to buffer.name, buffer %></td>
-        <td><%= buffer.description %></td>
+        <td><%= buffer.description %>
+          <% unless buffer.enabled %>
+            <span class="label label-danger">Disabled</span>
+          <% end %>
+
+        </td>
         <td><%= link_to 'Edit', edit_buffer_path(buffer) %></td>
         <td><%= link_to 'Destroy', buffer, method: :delete, data: { confirm: 'Are you sure?' } %></td>
       </tr>

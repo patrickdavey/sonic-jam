@@ -2,7 +2,7 @@ class BuffersController < ApplicationController
   before_action :set_buffer, only: [:show, :edit, :update, :destroy]
 
   def index
-    @buffers = Buffer.all
+    @buffers = Buffer.recent.all
   end
 
   def show
@@ -42,7 +42,7 @@ class BuffersController < ApplicationController
   end
 
   def complete_listing
-    @buffers = Buffer.enabled.all
+    @buffers = Buffer.recent.enabled.all
     render '/buffers/complete_listing.text.erb', layout: false, content_type: 'text/plain'
   end
 
