@@ -1,4 +1,4 @@
-# SonicPi Collaboration
+# Sonic Jam
 
 
 ## Description
@@ -17,8 +17,8 @@ Very very much thrown together and a WIP - PR's are welcome!
 
 1. Install [SonicPi](http://sonic-pi.net/)
 2. Install [sonic-pi-cli](https://github.com/Widdershin/sonic-pi-cli)
-3. Spin up a copy of this repo (example at https://sonicpi-collaboration.herokuapp.com/ )
-4. Curl in the compiled ruby scripts: `curl https://sonicpi-collaboration.herokuapp.com/buffers/complete_listing | sonic_pi`
+3. Spin up a copy of this repo (example at https://sonic-jam.herokuapp.com/ )
+4. Curl in the compiled ruby scripts: `curl https://sonic-jam.herokuapp.com/buffers/compiled | sonic_pi`
 
 You don't _have_ to run sonic pi on a raspberry pi (of course, it's way cooler if you do ;) , I found
 [this guide on autoboot and sonic-pi](https://rbnrpi.wordpress.com/autoboot-for-telegram-and-sonic-pi-jukebox/) quite handy for getting the pi to start in Xserver mode (which the sonic pi requires) but so that I was still able to control it

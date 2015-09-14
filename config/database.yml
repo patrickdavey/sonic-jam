@@ -1,7 +1,7 @@
 development:
   adapter: postgresql
   encoding: unicode
-  database: sonicpi_collaboration_dev
+  database: sonicjam_dev
   host: localhost
   pool: 5
   min_messages: warning
@@ -9,7 +9,7 @@ development:
 test:
   adapter: postgresql
   encoding: unicode
-  database: sonicpi_collaboration_test
+  database: sonicjam_test
   host: localhost
   pool: 5
   min_messages: warning
