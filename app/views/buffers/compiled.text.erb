@@ -3,9 +3,8 @@
 <%= "# #{buffer.name }" %>
 <%= "# #{buffer.description }" %>
 def <%= method %>
-<%= buffer.code %>
+<%= buffer.code.indent(2) %>
 end
-
 <%= method %>
-<% end %>
 
+<% end %>
