@@ -41,9 +41,9 @@ class BuffersController < ApplicationController
     end
   end
 
-  def complete_listing
+  def compiled
     @buffers = Buffer.recent.enabled.all
-    render '/buffers/complete_listing.text.erb', layout: false, content_type: 'text/plain'
+    render '/buffers/compiled.text.erb', layout: false, content_type: 'text/plain'
   end
 
   def destroy

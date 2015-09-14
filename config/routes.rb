@@ -1,7 +1,7 @@
 Rails.application.routes.draw do
   resources :buffers do
     collection do
-      get :complete_listing
+      get :compiled
     end
   end
 
